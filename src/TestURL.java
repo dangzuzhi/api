@@ -5,19 +5,19 @@ import java.net.URLConnection;
 public class TestURL { 
         public static void main(String[] args) throws IOException { 
                 test4(); 
-//                test3(); 
+//                test3(); //æš‚æ—¶æ³¨é‡Š
 //                test2(); 
                 test(); 
         } 
 
         /** 
-         * »ñÈ¡URLÖ¸¶¨µÄ×ÊÔ´¡£ 
+         * è·å–URLæŒ‡å®šçš„èµ„æºã€‚ 
          * 
          * @throws IOException 
          */ 
         public static void test4() throws IOException { 
                 URL url = new URL("http://lavasoft.blog.51cto.com/attachment/200811/200811271227767778082.jpg"); 
-                //»ñµÃ´Ë URL µÄÄÚÈİ¡£ 
+                //è·å¾—æ­¤ URL çš„å†…å®¹ã€‚ 
                 Object obj = url.getContent(); 
                 System.out.println(obj);
                 System.out.println(obj.getClass());
@@ -26,15 +26,15 @@ public class TestURL {
         } 
 
         /** 
-         * »ñÈ¡URLÖ¸¶¨µÄ×ÊÔ´ 
+         * è·å–URLæŒ‡å®šçš„èµ„æº 
          * 
          * @throws IOException 
          */ 
         public static void test3() throws IOException { 
                 URL url = new URL("http://www.hrtsea.com/down/soft/45.htm"); 
-                //·µ»ØÒ»¸ö URLConnection ¶ÔÏó£¬Ëü±íÊ¾µ½ URL ËùÒıÓÃµÄÔ¶³Ì¶ÔÏóµÄÁ¬½Ó¡£ 
+                //è¿”å›ä¸€ä¸ª URLConnection å¯¹è±¡ï¼Œå®ƒè¡¨ç¤ºåˆ° URL æ‰€å¼•ç”¨çš„è¿œç¨‹å¯¹è±¡çš„è¿æ¥ã€‚ 
                 URLConnection uc = url.openConnection(); 
-                //´ò¿ªµÄÁ¬½Ó¶ÁÈ¡µÄÊäÈëÁ÷¡£ 
+                //æ‰“å¼€çš„è¿æ¥è¯»å–çš„è¾“å…¥æµã€‚ 
                 InputStream in = uc.getInputStream(); 
                 int c; 
                 while ((c = in.read()) != -1) 
@@ -43,13 +43,13 @@ public class TestURL {
         } 
 
         /** 
-         * ¶ÁÈ¡URLÖ¸¶¨µÄÍøÒ³ÄÚÈİ 
+         * è¯»å–URLæŒ‡å®šçš„ç½‘é¡µå†…å®¹ 
          * 
          * @throws IOException 
          */ 
         public static void test2() throws IOException { 
                 URL url = new URL("http://www.hrtsea.com/down/soft/45.htm"); 
-                //´ò¿ªµ½´Ë URL µÄÁ¬½Ó²¢·µ»ØÒ»¸öÓÃÓÚ´Ó¸ÃÁ¬½Ó¶ÁÈëµÄ InputStream¡£ 
+                //æ‰“å¼€åˆ°æ­¤ URL çš„è¿æ¥å¹¶è¿”å›ä¸€ä¸ªç”¨äºä»è¯¥è¿æ¥è¯»å…¥çš„ InputStreamã€‚ 
                 Reader reader = new InputStreamReader(new BufferedInputStream(url.openStream())); 
                 int c; 
                 while ((c = reader.read()) != -1) { 
@@ -59,13 +59,13 @@ public class TestURL {
         } 
 
         /** 
-         * »ñÈ¡URLµÄÊäÈëÁ÷£¬²¢Êä³ö 
+         * è·å–URLçš„è¾“å…¥æµï¼Œå¹¶è¾“å‡º 
          * 
          * @throws IOException 
          */ 
         public static void test() throws IOException { 
                 URL url = new URL("http://lavasoft.blog.51cto.com/62575/120430"); 
-                //´ò¿ªµ½´Ë URL µÄÁ¬½Ó²¢·µ»ØÒ»¸öÓÃÓÚ´Ó¸ÃÁ¬½Ó¶ÁÈëµÄ InputStream¡£ 
+                //æ‰“å¼€åˆ°æ­¤ URL çš„è¿æ¥å¹¶è¿”å›ä¸€ä¸ªç”¨äºä»è¯¥è¿æ¥è¯»å…¥çš„ InputStreamã€‚ 
                 InputStream in = url.openStream(); 
                 int c; 
                 while ((c = in.read()) != -1) 
