@@ -5,7 +5,7 @@ import java.net.URLConnection;
 public class TestURL { 
         public static void main(String[] args) throws IOException { 
                 test4(); 
-//                test3(); //暂时注释
+//                test3(); //暂时注释//
 //                test2(); 
                 test(); 
         } 
