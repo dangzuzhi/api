@@ -6,7 +6,7 @@
  * into with textile.com.
  */
 
-
+//test
 import java.io.DataInputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -14,16 +14,16 @@ import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Map;
 //update Test
-/**
+/**20181130
  * @fileName com.bxm.advertisercmsaaa.java
- * @CopyRright (c) 2017-bxm£ºº¼ÖÝÎ¢²Æ¿Æ¼¼ÓÐÏÞ¹«Ë¾
- * @date 2018Äê3ÔÂ9ÈÕ ÉÏÎç10:40:36
+ * @CopyRright (c) 2017-bxmï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¢ï¿½Æ¿Æ¼ï¿½ï¿½ï¿½ï¿½Þ¹ï¿½Ë¾
+ * @date 2018ï¿½ï¿½3ï¿½ï¿½9ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½10:40:36
  * @author chzq
  */
 public class Test {
 
     /**
-     * @date 2018Äê3ÔÂ9ÈÕ ÉÏÎç10:40:40
+     * @date 2018ï¿½ï¿½3ï¿½ï¿½9ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½10:40:40
      * @param args
      * @author chzq
      */
@@ -31,9 +31,9 @@ public class Test {
         StringBuilder sb = new StringBuilder(
                 "https://buy.bianxianmao.com/shop/countInfo");
         Map<String, String> params = new HashMap<String, String>();
-        params.put("bxm_id", "Ç°¶Ë´«¹ýÀ´µÄbxm_deµÄÖµ");
-        params.put("status","1");//¹Ì¶¨Öµ
-        params.put("modeltype", "7");//¹Ì¶¨Öµ
+        params.put("bxm_id", "Ç°ï¿½Ë´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½bxm_deï¿½ï¿½Öµ");
+        params.put("status","1");//ï¿½Ì¶ï¿½Öµ
+        params.put("modeltype", "7");//ï¿½Ì¶ï¿½Öµ
         String result1 = GetPostUrl(sb.toString(), params, "GET",null, 0, 0);
         System.out.println(result1);
         
@@ -45,13 +45,13 @@ public class Test {
         HttpURLConnection httpurlconnection = null;
 
         try {
-            // ¹¹½¨ÇëÇó²ÎÊý
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             StringBuffer paramSb = new StringBuffer();
             if (params != null) {
                 for (java.util.Map.Entry<String, String> e : params.entrySet()) {
                     paramSb.append(e.getKey());
                     paramSb.append("=");
-                    // ½«²ÎÊýÖµurlEncode±àÂë,·ÀÖ¹´«µÝÖÐÂÒÂë
+                    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÖµurlEncodeï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                     paramSb.append(URLEncoder.encode(e.getValue(), "UTF-8"));
                     paramSb.append("&");
                 }
@@ -64,7 +64,7 @@ public class Test {
             httpurlconnection.setDoInput(true);
             httpurlconnection.setDoOutput(true);
 
-            // ÉèÖÃhttpÇëÇó³¬Ê±Ê±¼ä30000ºÁÃë£¨30Ãë£©
+            // ï¿½ï¿½ï¿½ï¿½httpï¿½ï¿½ï¿½ï¿½Ê±Ê±ï¿½ï¿½30000ï¿½ï¿½ï¿½ë£¨30ï¿½ë£©
             httpurlconnection.setConnectTimeout(30000);
             httpurlconnection.setReadTimeout(30000);
             httpurlconnection.setUseCaches(true);
@@ -87,8 +87,8 @@ public class Test {
 
                 return rev;
             } else {
-                // http ÇëÇó·µ»Ø·Ç 200×´Ì¬Ê±´¦Àí
-                return "<?xml version=\"1.0\" encoding=\"utf-8\" ?><error>·¢ËÍµÚÈý·½ÇëÇóÊ§°Ü</error>";
+                // http ï¿½ï¿½ï¿½ó·µ»Ø·ï¿½ 200×´Ì¬Ê±ï¿½ï¿½ï¿½ï¿½
+                return "<?xml version=\"1.0\" encoding=\"utf-8\" ?><error>ï¿½ï¿½ï¿½Íµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½</error>";
             }
 
         } catch (Exception e) {
